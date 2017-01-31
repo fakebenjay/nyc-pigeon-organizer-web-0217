@@ -24,8 +24,9 @@ def nyc_pigeon_organizer(data)
     data.each do |category, attributes|
       organized_hash[bird][category] = []
       attributes.each do |stat, pigeons|
-        if pigeons.include?(bird)  
+        if pigeons.include?(bird)
           aspect = stat.to_s
+          #because a lot of the symbols in the original array need to be strings
           organized_hash[bird][category] << aspect
         end
       end
